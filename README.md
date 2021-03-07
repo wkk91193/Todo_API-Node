@@ -13,7 +13,7 @@ npm install
 ### Run server (http://localhost:8080)
 
 ```
-1. cd app
+1.cd app 
 ```
 ```
 2.npm start
@@ -22,7 +22,7 @@ npm install
 ### Run tests 
 
 ```
-1. cd app
+1.cd app
 ```
 ```
 2.npm run test
