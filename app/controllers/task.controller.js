@@ -39,7 +39,7 @@ exports.findTaskById = (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  return task.findByPk(taskId, { include: ["subtasks"] })
+  return task.findByPk(taskId)
     .then((result) => {
       res.send(result);
       console.log(`>> Task with Id: ${taskId} is ${JSON.stringify(result, null, 4)}`);
@@ -86,9 +86,7 @@ exports.updateTaskStatus = (req, res) => {
 
 // Get all tasks include subtask
 exports.findAll = (req, res) => {
-  return task.findAll({
-    include: ["subtasks"],
-  }).then((results) => {
+  return task.findAll().then((results) => {
     res.send(results);
     console.log(`>> All Tasks${JSON.stringify(results, null, 4)}`);
 
