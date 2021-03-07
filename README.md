@@ -1,6 +1,6 @@
 # Task Tracker API
 
-This is the project backend needed to run the Task tracker API.
+This is the project backend needed to run the Task tracker APP.
 
 ## Usage
 
