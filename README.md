@@ -10,8 +10,20 @@ This is the project backend needed to run the Task tracker API.
 npm install
 ```
 
-### Run React dev server (http://localhost:8080)
+### Run server (http://localhost:8080)
 
 ```
-npm start
+1. cd app
+```
+```
+2.npm start
+```
+
+### Run tests 
+
+```
+1. cd app
+```
+```
+2.npm run test
 ```
