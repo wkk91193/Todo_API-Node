@@ -1,9 +1,10 @@
 {
 "response.title.required":"title is required",
-"response.taskStatus.required":"taskStatus is required",
+"response.completed.required":"completed is required",
 "response.error":"An error has occured!",
-"response.task.updated":"Task updated",
-"response.task.updatefail":"Task update fail",
-"response.task.deleted":"Task deleted",
-"response.task.deletefail":"Task delete failed"
+"response.task.updated":"Task(s) updated",
+"response.task.updatefail":"Task(s) update fail",
+"response.task.deleted":"Task(s) deleted",
+"response.task.deletefail":"Task(s) delete failed"
+
 }

@@ -76,6 +76,43 @@ describe('Tasks API',()=>{
     })
  })
 
+ describe('Tasks API',()=>{
+    it("It should DELETE Task by Id", (done)=>{
+        chai.request(server)
+            .delete("/api/deleteTaskById/taskId/"+taskkId)
+            .end((err,response)=>{
+                response.should.have.status(200);
+                response.text.should.be.eql(responseMessage["response.task.deleted"]);
+                done();
+            })
+
+    })
+ })
 
 
+ describe('Tasks API',()=>{
+    it("It should CHECK all tasks that not complete", (done)=>{
+        chai.request(server)
+            .put("/api/todosCheckAll")
+            .end((err,response)=>{
+                response.should.have.status(200);
+                response.text.should.be.eql(responseMessage["response.task.updated"]);
+                done();
+            })
+
+    })
+ })
+
+ describe('Tasks API',()=>{
+    it("It should DELETE all tasks that are complete", (done)=>{
+        chai.request(server)
+            .delete("/api/todosDeleteCompleted")
+            .end((err,response)=>{
+                response.should.have.status(200);
+                response.text.should.be.eql(responseMessage["response.task.deleted"]);
+                done();
+            })
+
+    })
+ })
 

@@ -115,3 +115,27 @@ exports.deleteTask = (req,res) =>{
   });
 
 }
+
+exports.completeAllTasks = (req,res) =>{
+  return task.update({completed:true}, {
+    where: { completed: false }
+  }).then(num => {
+        res.send(responseMessage["response.task.updated"]);
+    })
+    .catch((err) => {
+      res.send(responseMessage["response.error"]);
+      console.log(`>> Error while updating task:  ${err}`);
+    });
+
+}
+
+exports.deleteAllCompleted = (req,res) =>{
+  return task.destroy({
+    where: { completed: true }
+  }).then(num => {
+      res.send(responseMessage["response.task.deleted"]);
+  }).catch((err) => {
+    res.send(responseMessage["response.error"]);
+  });
+
+}

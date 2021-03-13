@@ -19,7 +19,14 @@ module.exports = app => {
   router.get("/findAllTasks", task.findAll);
 
   //Delete a task
-  router.delete("/deleteTaskById/taskId/:taskId",requestValidator.validate('deleteTask'),task.deleteTask )
+  router.delete("/deleteTaskById/taskId/:taskId",requestValidator.validate('deleteTask'),task.deleteTask );
+
+  // Get all tasks
+  router.put("/todosCheckAll", task.completeAllTasks);
+
+  // Get all tasks
+  router.delete("/todosDeleteCompleted", task.deleteAllCompleted);
+
 
   app.use("/api", router);
 };
