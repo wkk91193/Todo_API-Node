@@ -93,7 +93,7 @@ describe('Tasks API',()=>{
  describe('Tasks API',()=>{
     it("It should CHECK all tasks that not complete", (done)=>{
         chai.request(server)
-            .put("/api/todosCheckAll")
+            .patch("/api/todosCheckAll")
             .end((err,response)=>{
                 response.should.have.status(200);
                 response.text.should.be.eql(responseMessage["response.task.updated"]);

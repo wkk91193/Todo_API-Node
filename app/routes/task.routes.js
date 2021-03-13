@@ -22,7 +22,7 @@ module.exports = app => {
   router.delete("/deleteTaskById/taskId/:taskId",requestValidator.validate('deleteTask'),task.deleteTask );
 
   // Get all tasks
-  router.put("/todosCheckAll", task.completeAllTasks);
+  router.patch("/todosCheckAll", task.completeAllTasks);
 
   // Get all tasks
   router.delete("/todosDeleteCompleted", task.deleteAllCompleted);
