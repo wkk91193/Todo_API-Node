@@ -20,7 +20,7 @@ exports.validate = (method) => {
         return[
             param('taskId', requestMessage['response.taskId.required']).exists(),
             body('title', requestMessage['response.title.required']).exists(),
-            body('taskStatus', requestMessage['response.taskStatus.required']).exists(),
+            body('completed', requestMessage['response.taskStatus.required']).exists(),
           ]
         break;
       }

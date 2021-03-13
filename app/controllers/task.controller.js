@@ -12,11 +12,12 @@ exports.createTask = (req, res) => {
   }
   const taskInfo = {
     title: req.body.title,
-    task_status: false
+    completed:req.body.completed
+
   }
   return task.create({
     title: taskInfo.title,
-    task_status: taskInfo.task_status,
+    completed: taskInfo.completed,
   })
     .then((result) => {
       res.send(result);
@@ -56,7 +57,7 @@ exports.updateTaskStatus = (req, res) => {
 
   const taskInfo = {
     title: req.body.title,
-    task_status: req.body.taskStatus,
+    task_status: req.body.completed,
 
   }
   const taskId = req.params.taskId;
