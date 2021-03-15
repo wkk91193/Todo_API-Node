@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app/server.js",
     "dev": "cross-env NODE_ENV=development nodemon server.js",
-    "test": "mocha",
+    "test": "mocha --timeout 100000",
     "prod": "cross-env NODE_ENV=production & nodemon server.js"
   },
   "keywords": [
