@@ -5,8 +5,7 @@ exports.validate = (method) => {
     switch (method) {
       case 'createTask': {
        return [ 
-          body('title', requestMessage['response.title.required']).exists(),
-          body('completed', requestMessage['response.completed.required']).exists()
+          body('title', requestMessage['response.title.required']).exists()
          ]
         break;   
       }    

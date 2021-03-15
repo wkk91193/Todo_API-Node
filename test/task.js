@@ -38,7 +38,7 @@ describe('Tasks API',()=>{
             .set('content-type','application/json')
             .send({
                 "title":"Testtask_1",
-                "completed":true,
+                "completed":true
             })
             .end((err,response)=>{
                 response.should.have.status(200);
