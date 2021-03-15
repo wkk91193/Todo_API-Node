@@ -10,6 +10,11 @@ This is the project backend needed to run the Task tracker APP.
 npm install
 ```
 
+### Prequisite:
+```
+Place the .env file inside the app directory.
+```
+
 ### Run server (http://localhost:8080)
 
 ```
